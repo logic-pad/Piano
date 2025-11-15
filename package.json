@@ -1,9 +1,9 @@
 {
-	"name": "@hlysine/piano",
-	"version": "0.2.1",
+	"name": "@logic-pad/piano",
+	"version": "0.2.2",
 	"description": "Web Audio instrument using Salamander Grand Piano samples",
 	"repository": {
-	  "url": "https://github.com/tambien/Piano"
+	  "url": "https://github.com/logic-pad/Piano"
 	},
 	"browser": "build/index.js",
 	"main": "build/index.js",
@@ -13,8 +13,8 @@
 	"types": "build/index.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"prepare": "npm run build",
-		"increment": "npm version v$(semver --increment $(npm show @tonejs/piano version)) --git-tag-version=false --allow-same-version",
+		"prepare": "bun run build",
+		"increment": "npm version v$(semver --increment $(npm show @logic-pad/piano version)) --git-tag-version=false --allow-same-version",
 		"lint": "tslint --project tsconfig.json --fix",
 		"test": "karma start test/karma.conf.js",
 		"watch": "tsc --watch"
